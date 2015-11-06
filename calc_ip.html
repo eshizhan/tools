@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Calc Shop IP</title>
+    <script>
+    function calcIP(shopNo) {
+      var ipSequence = parseInt(shopNo.substr(2, 3));
+      var provinceAddr = "100";
+      var tmpStr = provinceAddr;
+      tmpStr += "." + parseInt(shopNo.substr(0, 2));
+      tmpStr += "." + parseInt((ipSequence - 1) * 16 / 256);
+      var netIP = tmpStr;
+      netIP += "." + parseInt((ipSequence - 1) * 16 % 256 + 1);
+      var gateway = tmpStr;
+      gateway += "." + parseInt((ipSequence - 1) * 16 % 256 + 14);
+      var netmask = "255.255.255.240";
+      var ret = [
+      netIP,
+      netmask,
+      gateway
+      ];
+      return ret;
+    }
+    function showIP() {
+      var shopNo = document.getElementById("shopNo").value;
+      var ret = calcIP(shopNo).join("<br>");
+      document.getElementById("show").innerHTML = ret;
+    }
+    </script>
+  </head>
+
+  <body style="text-align:center">
+    <input type="text" id="shopNo">
+    <button type="button" onclick="showIP()">CALC</button>
+    <p id="show"></p>
+  </body>
+</html> 
