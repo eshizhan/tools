@@ -1,0 +1,8 @@
+POST /gateway.do?charset=utf-8 HTTP/1.1
+User-Agent: Aop4Net
+Content-Type: application/x-www-form-urlencoded;charset=utf-8
+Host: localhost:8080
+Content-Length: 680
+Connection: Keep-Alive
+
+biz_content=%7b%22serial_number%22%3a%22110020000047894810%22%2c%22channel_id%22%3a%222088221509398601%22%2c%22status%22%3a%22USED%22%2c%22verify_type%22%3a%22qrcode%22%7d&method=alipay.pass.instance.update&version=1.0&app_id=2016032801247889&timestamp=2016-08-16+16%3a29%3a44&sign_type=RSA&charset=utf-8&sign=ZbkvzGYZSBlvszN3JvhITQ59jB1g%2bgtALr0%2brPTaQPUWkszb6Wt9O%2bF%2f%2bWl7VtgVHVH%2f47pyeDSfrnlr20EnFDdOAPhONOkpTHEAEvHfGybkKzUPn29cWUf%2f4BMR5DzR1YtL5OWbTMI0uXJFJei7SRkfSE%2bg%2fOqCC06A7xzYLMNKipejajEWsnKkxHxfZvf0o4J%2f8hVZedeIxHufe3uCH7muFp1Q6bvTCmZY7uUJUVj6a0oWYIBV0E8I5w46lf6jkipBA8VXSuQktcDeGXbwNr8C08IitqxT%2fJdtxov7PgBoQEZ3kEjv1IZ7wIEUKWs65qajwrwiG2aNttDE1KgyfA%3d%3d
